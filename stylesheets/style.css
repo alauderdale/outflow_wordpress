@@ -787,13 +787,47 @@ footer .social-icons ul li a:hover {
   color: #848484;
 }
 
+@media (max-width: 640px) {
+  /* line 657, ../sass/style.scss */
+  section.donate_infographic ul.donate_infographic_blocks {
+    text-align: center;
+    margin: 0;
+  }
+  /* line 660, ../sass/style.scss */
+  section.donate_infographic ul.donate_infographic_blocks li {
+    text-align: left;
+    background-color: #f0f1ed;
+    width: 300px;
+    margin: 0 0 10px 0;
+  }
+  /* line 665, ../sass/style.scss */
+  section.donate_infographic ul.donate_infographic_blocks li:nth-child(odd) {
+    margin-right: 0;
+  }
+  /* line 668, ../sass/style.scss */
+  section.donate_infographic ul.donate_infographic_blocks li:nth-child(even) {
+    text-align: left;
+  }
+  /* line 671, ../sass/style.scss */
+  section.donate_infographic ul.donate_infographic_blocks li:nth-child(1), section.donate_infographic ul.donate_infographic_blocks li:nth-child(2) {
+    padding-bottom: 24px !important;
+  }
+  /* line 674, ../sass/style.scss */
+  section.donate_infographic ul.donate_infographic_blocks li:nth-child(3), section.donate_infographic ul.donate_infographic_blocks li:nth-child(4) {
+    padding-top: 24px !important;
+  }
+  /* line 679, ../sass/style.scss */
+  section.donate_infographic .donate-logo-background {
+    display: none;
+  }
+}
 @media (max-width: 780px) {
-  /* line 658, ../sass/style.scss */
+  /* line 690, ../sass/style.scss */
   .navbar {
     padding: 4px;
   }
 
-  /* line 663, ../sass/style.scss */
+  /* line 695, ../sass/style.scss */
   h1.jumbo-text {
     font-size: 3em;
     line-height: 48px;
@@ -801,15 +835,15 @@ footer .social-icons ul li a:hover {
   }
 }
 @media (max-width: 990px) {
-  /* line 676, ../sass/style.scss */
+  /* line 708, ../sass/style.scss */
   .stats-container ul li {
     margin-bottom: 24px;
   }
-  /* line 678, ../sass/style.scss */
+  /* line 710, ../sass/style.scss */
   .stats-container ul li:first-of-type {
     margin-left: 0 !important;
   }
-  /* line 681, ../sass/style.scss */
+  /* line 713, ../sass/style.scss */
   .stats-container ul li:nth-child(odd) {
     margin-right: 0 !important;
   }

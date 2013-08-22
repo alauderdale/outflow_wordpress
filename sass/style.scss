@@ -651,6 +651,38 @@ footer{
 
 //bootstrap overrides
 
+@media (max-width: 640px) {
+  section{
+    &.donate_infographic{
+      ul.donate_infographic_blocks{
+        text-align:center;
+        margin:0;
+        li{
+          text-align:left;
+          background-color:$light-gray-color;
+          width:300px;
+          margin:0 0 10px 0;
+          &:nth-child(odd){
+            margin-right:0;
+          }
+          &:nth-child(even){
+            text-align:left;
+          }
+          &:nth-child(1),&:nth-child(2){
+            padding-bottom:$baseline!important;
+          }
+          &:nth-child(3),&:nth-child(4){
+            padding-top:$baseline!important;
+          }
+        }
+      }
+      .donate-logo-background{
+        display:none;
+      }
+    }
+  }
+}
+
 
 
 @media (max-width: 780px) {

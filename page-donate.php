@@ -57,39 +57,37 @@ Template Name: Donate
           <div class='col-lg-2'></div>
           <div class='col-lg-8'>
             <div class='text-center double-margin-bottom'>
-              <div class='row'>
                 <?php the_content(); ?> 
-              </div>
             </div>
           </div>
           <div class='col-lg-2'></div>
         </div>
       </div>
-      <div class='row'>
-        <div class='col-lg-2'></div>
-        <div class='col-lg-8'>
-          <ul class='list-inline donate_infographic_blocks'>
-            <?php
-             $donatePointLoop = new WP_Query( array( 
-                'post_type' => 'donate_point', 
-                'posts_per_page' => '4'
-              ));
-            ?>
-            <?php while ( $donatePointLoop->have_posts() ) : $donatePointLoop->the_post(); ?>
-              <li class='padded'>
-                <h2>
-                  <?php the_title(); ?>
-                </h2>
-                <p>
-                  <?php the_content(); ?>
-                </p>
-              </li>
-            <?php endwhile; ?>
-          </ul>
-          <div class='donate-logo-background'></div>
-        </div>
-        <div class='col-lg-2'></div>
+    </div>
+    <div class='row'>
+      <div class='col-lg-2'></div>
+      <div class='col-lg-8'>
+        <ul class='list-inline donate_infographic_blocks'>
+          <?php
+           $donatePointLoop = new WP_Query( array( 
+              'post_type' => 'donate_point', 
+              'posts_per_page' => '4'
+            ));
+          ?>
+          <?php while ( $donatePointLoop->have_posts() ) : $donatePointLoop->the_post(); ?>
+            <li class='padded'>
+              <h2>
+                <?php the_title(); ?>
+              </h2>
+              <p>
+                <?php the_content(); ?>
+              </p>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+        <div class='donate-logo-background'></div>
       </div>
+      <div class='col-lg-2'></div>
     </div>
   </div>
 </section>

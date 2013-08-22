@@ -12,7 +12,22 @@
   
   register_nav_menu( 'main_nav', __( 'Main navigation menu', 'mytheme' ) );
 
-      //create post types
+      /*** Register our sidebars and widgetized areas.**/
+    function wli_widgets_init() {
+
+        register_sidebar( array(
+            'name' => 'contact',
+            'id' => 'contact',
+            'before_widget' => '',
+            'after_widget' => '',
+            'before_title' => '',
+            'after_title' => '',
+            ) 
+        );        
+    }
+    add_action( 'widgets_init', 'wli_widgets_init' ); 
+
+  //create post types
     
     add_action( 'init', 'create_my_post_types' );
     
@@ -172,6 +187,13 @@
 	                'name' => 'Heading',
 	                'desc' => 'Enter text for the contact page heading',
 	                'id' => 'heading',
+	                'type' => 'text',
+	                'std' => ''
+	            ),
+	            array(
+	                'name' => 'Contact form shortcode',
+	                'desc' => 'Enter the shortcode text from the contact form plugin',
+	                'id' => 'contact_code',
 	                'type' => 'text',
 	                'std' => ''
 	            ),

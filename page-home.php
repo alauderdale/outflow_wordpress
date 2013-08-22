@@ -203,31 +203,10 @@ Template Name: Home
         </div>
         <div class='row'>
           <div class='col-lg-5'>
-          	<?php echo do_shortcode('[contact-form-7 id="23" title="Untitled"]'); ?>
-<!--             <form class='form-horizontal' role='form'></form>
-            <fieldset>
-              <div class='form-group'>
-                <label>
-                  Name:
-                </label>
-                <input class='form-control' placeholder='Enter email' type='text'>
-              </div>
-              <div class='form-group'>
-                <label>
-                  Email:
-                </label>
-                <input class='form-control' placeholder='Enter email' type='text'>
-              </div>
-              <div class='form-group'>
-                <label>
-                  your Message:
-                </label>
-                <textarea class='form-control' placeholder='Enter email' rows='10' type='text'></textarea>
-              </div>
-              <button class='btn btn-primary btn-lg btn-block margin-bottom' type='submit'>
-                Submit
-              </button>
-            </fieldset> -->
+          	<?php $var = get_post_meta($post->ID, 'contact_code', true);
+							if ($var == '')
+							{ }
+							else { echo do_shortcode( $var); } ?>
           </div>
           <div class='col-lg-5 col-lg-offset-2'>
             <h2>
