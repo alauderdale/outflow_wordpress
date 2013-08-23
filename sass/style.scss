@@ -648,6 +648,27 @@ footer{
   }
 }
 
+.stripe-form{
+  h3{
+    text-align:center;
+    margin-bottom:$baseline!important;
+    padding-bottom:$baseline;
+    border-bottom:1px solid $light-gray-color;
+  }
+  input[type="text"]{
+    border-radius:4px;
+    background-color:#fafafa!important;
+  }
+  .stripe-payment-form-row-submit button{
+    margin-left:0!important;
+    padding-left:$baseline*4;
+    padding-right:$baseline*4;
+  }
+  .stripe-payment-form-row-submit{
+    text-align:center;
+  }
+}
+
 
 //bootstrap overrides
 

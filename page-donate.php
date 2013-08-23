@@ -16,6 +16,19 @@ Template Name: Donate
   	}, 1900);
   	return false;
   	});
+
+    $('.stripe-payment-form-submit').addClass('btn btn-primary btn-lg margin-bottom');
+
+
+    $(".donate-button").click(function(){
+        var string1 = $(this).text();
+        var string2 = string1.replace(/[^0-9]/g, '')
+        $(".amountShown").val(string2 ).focus();
+    });
+    $(".other-button").click(function(){
+        $(".amountShown").val("").focus();
+
+    })
   
   
   });
@@ -94,14 +107,41 @@ Template Name: Donate
 <section>
   <div class="container">
       <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 stripe-form">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 stripe-form">
+          <div class="text-center">
+            <div class="btn-group">
+              <button class="btn btn-primary btn-lg margin-bottom donate-button">
+                $30
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-lg margin-bottom donate-button">
+                $50
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-lg margin-bottom donate-button">
+                $100
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-lg margin-bottom donate-button">
+                $200
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-lg margin-bottom other-button">
+                other
+              </button>
+            </div>
+          </div>
           <?php echo do_shortcode("[stripe_form_begin test=true]"); ?>
-          <?php echo do_shortcode("[stripe_form_standard_amount short=true amount=20.00]"); ?>
+          <?php echo do_shortcode("[stripe_form_standard_amount short=true]"); ?>
           <?php echo do_shortcode("[stripe_form_end]"); ?>
           <?php echo do_shortcode("[stripe_form_receipt]"); ?>
         </div>
-        <div class="col-lg-2"></div>
+        <div class="col-lg-3"></div>
     </div>
   </div>
 </section>
