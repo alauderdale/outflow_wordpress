@@ -91,5 +91,19 @@ Template Name: Donate
     </div>
   </div>
 </section>
+<section>
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 stripe-form">
+          <?php echo do_shortcode("[stripe_form_begin test=true]"); ?>
+          <?php echo do_shortcode("[stripe_form_standard_amount short=true amount=20.00]"); ?>
+          <?php echo do_shortcode("[stripe_form_end]"); ?>
+          <?php echo do_shortcode("[stripe_form_receipt]"); ?>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+  </div>
+</section>
 
 <?php get_footer(); ?>
