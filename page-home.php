@@ -21,6 +21,21 @@ Template Name: Home
   	}, 1900);
   	return false;
   	});
+
+  	//animate awesomeness
+          	var controller = $.superscrollorama({
+          	triggerAtCenter: true,
+          	playoutAnimations: true,
+          	reverse: false
+          	});
+          
+          	controller.addTween('.circle-container', TweenMax.from( $('.circle-1'), .8, {scale:0.35, opacity: 0, ease:Expo.easeOut}), 0, -100);
+          
+          	controller.addTween('.circle-container', TweenMax.from( $('.circle-2'), .8, {scale:0.35, opacity: 0,  ease:Expo.easeOut}), 0, -100);
+          
+          	controller.addTween('.circle-container', TweenMax.from( $('.circle-3'), .8, {scale:0.35, opacity: 0,  ease:Expo.easeOut}), 0, -100);
+          
+          	controller.addTween('.circle-container', TweenMax.from( $('.circle-4'), .8, {scale:0.35, opacity: 0, ease:Expo.easeOut}), 0, -100);
   
   
   });
@@ -70,9 +85,6 @@ Template Name: Home
           <?php while ( $homeIconLoop->have_posts() ) : $homeIconLoop->the_post(); ?>
 	          <div class='col-lg-4 col-sm-4 col-md-4 col-xs-4'>
 	            <div class='text-center padded'>
-	            	<div class="thumb-icon margin-bottom">
-	              	<?php the_post_thumbnail(); ?> 
-	            	</div>
 	              <h3>
 	                <?php the_title(); ?>
 	              </h3>
@@ -103,9 +115,12 @@ Template Name: Home
 		        <div class='col-lg-1'></div>
 		        <div class='col-lg-10'>
 		          <div class='text-center'>
-		          	<div class="margin-bottom mission-img">
-		            	<?php the_post_thumbnail(); ?>
-		          	</div>
+		          	<div class='circle-container text-center'>
+			            <div class='circle-1 circle'></div>
+			            <div class='circle-2 circle'></div>
+			            <div class='circle-3 circle'></div>
+			            <div class='circle-4 circle'></div>
+			          </div>
 		            <h1 class='jumbo-text'>
 		              <?php the_title(); ?>
 		            </h1>

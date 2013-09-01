@@ -15,6 +15,8 @@
     <script src="<?php bloginfo('template_url'); ?>/javascripts/bootstrap.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.pagescroller.lite.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/javascripts/scripts.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.superscrollorama.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('template_url'); ?>/javascripts/TweenMax.min.js" type="text/javascript"></script>
     <?php wp_head(); ?>
   </head>
   <body class='index'>
