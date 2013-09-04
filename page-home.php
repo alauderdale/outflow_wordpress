@@ -84,7 +84,10 @@ Template Name: Home
           ?>
           <?php while ( $homeIconLoop->have_posts() ) : $homeIconLoop->the_post(); ?>
 	          <div class='col-lg-4 col-sm-4 col-md-4 col-xs-4'>
-	            <div class='text-center padded'>
+	            <div class='text-center' style="padding:20px;">
+	            	<div class="margin-bottom thumb-icon">
+	            		<?php the_post_thumbnail(); ?>
+	            	</div>
 	              <h3>
 	                <?php the_title(); ?>
 	              </h3>

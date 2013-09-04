@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+        /// menu
+
+    $(window).scroll(function(){
+     var divOffset = $('.menu-offset').offset();
+     if(window.scrollY > divOffset.top ){
+        $('.navbar').addClass('small-nav');
+     }
+     if(window.scrollY < divOffset.top){
+        $('.navbar').removeClass('small-nav');
+     }
+    });
+
     function isiPhone(){
     return (
     //Detect iPhone
@@ -30,7 +42,5 @@ $(document).ready(function(){
             });
         });
     }
-
-
 
 });

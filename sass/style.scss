@@ -470,8 +470,15 @@ a{
 //header
 
 .navbar{
-  padding:$baseline/2 $baseline;
-  background:#000;
+  padding-top:$baseline;
+  padding-bottom:$baseline;
+  background:rgba(0,0,0,.2);
+  @include transition-duration(.3s);
+  &.small-nav{
+    background:#000;
+    padding-top:$baseline/4;
+    padding-bottom:$baseline/4;
+  }
   ul.navbar-nav{
     li{
       font-family:$bold-font-name;
@@ -503,11 +510,11 @@ a{
   }
   a{
     &.logo{
-      width:39px;
-      background:url(../images/logo_small.png) no-repeat;
+      width:125px;
+      background:url(../images/logo_small.png) no-repeat 100%;
+      background-size:100%;
       display:block;
       position:relative;
-      top:4px;
     }
   }
 }
@@ -554,6 +561,7 @@ a{
 section{
   padding:$baseline*4 0;
   &.hero{
+    padding-top:$baseline*5;
     background: center top fixed; 
     @include background-size(cover);
     background-color:$black-color;
@@ -568,9 +576,12 @@ section{
     }
   }
   &.icons{
+    h3{
+      line-height:30px!important;
+    }
     .thumb-icon{
       img{
-        width:140px;
+        width:100%;
         height:auto;
       }
     }
@@ -603,9 +614,14 @@ section{
       text-align:center;
       margin-bottom:-$baseline;
       li{
-        margin-bottom:$baseline;
+        margin-bottom:$baseline*2;
+        text-align:left;
+        img{
+          width:184px;
+          height:184px;
+        }
         &:first-of-type{
-          margin-left:$baseline*3;
+          margin-right:$baseline + 30px!important;
         }
         &:nth-child(odd){
           margin-right:$baseline;
@@ -613,8 +629,8 @@ section{
         h1.number{
           position:relative;
           text-align:center;
-          top: -123px;
-          left: 14px;
+          top: -116px;
+          left: 12px;
           font-size:5em;
           margin-bottom:-50px;
         }
@@ -754,6 +770,37 @@ footer{
 
 
 @media (max-width: 780px) {
+
+  .navbar{
+    background:#000;
+  }
+
+section{
+  .stats-container{
+    margin:0 auto;
+    display:block;
+    ul{
+      text-align:center;
+      li{
+        text-align:center!important;
+        img{
+          width:184px;
+          height:184px;
+        }
+        &:first-of-type{
+          margin-right:11px!important;
+        }
+        &:nth-child(odd){
+
+        }
+        h1.number{
+          top: -116px!important;
+          left: 3px!important;
+        }
+      }
+    }
+  }
+}
 
   .navbar{
     padding:$baseline/6;

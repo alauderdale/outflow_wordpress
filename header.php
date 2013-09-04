@@ -60,4 +60,5 @@
         </div>
       </div>
     </div>
+    <div class="menu-offset"></div>
     <div id='wrapper'>
