@@ -1,0 +1,53 @@
+<!-- stats -->
+<?php
+ $statsLoop = new WP_Query( array( 
+   	'post_type' => 'stat', 
+   	'posts_per_page' => '4'
+ 	));
+?>
+  <section class='stats' id='stats'>
+	  <div class='container'>
+	    <div class='row'>
+	      <div class='col-lg-12'>
+	        <div class='row'>
+	          <div class='col-lg-1'></div>
+	          <div class='col-lg-10'>
+	            <div class='text-center triple-padding-bottom'>
+	              <h1 class='jumbo-text'>
+	                <?php echo get_post_meta($post->ID, 'stats_title', true); ?>
+	              </h1>
+	              <p class='extra-bold-font-name lead'>
+	                <?php echo get_post_meta($post->ID, 'stats_sub', true); ?>
+	              </p>
+	            </div>
+	          </div>
+	          <div class='col-1'></div>
+	        </div>
+	        <div class='row'>
+	          <div class='stats-container'>
+	            <ul class='list-inline'>
+	            	<?php while ( $statsLoop->have_posts() ) : $statsLoop->the_post(); ?>
+	              <li>
+	                <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center'>
+	                  <?php the_post_thumbnail(); ?>
+	                  <h1 class='number'>
+	                    <?php echo get_post_meta($post->ID, 'stat_number', true); ?>
+	                  </h1>
+	                </div>
+	                <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+	                  <h3 class='margin-top'>
+	                    <?php the_title(); ?>
+	                  </h3>
+	                  <span class='lead primary-text-color'>
+	                    <?php the_content(); ?>
+	                  </span>
+	                </div>
+	              </li>
+	              <?php endwhile; ?>
+	            </ul>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+</section>

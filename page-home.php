@@ -70,13 +70,9 @@ Template Name: Home
 <!--end the loop-->
 	<?php endwhile; ?>
 <?php endif; ?>
-	<!-- stats -->
-<?php
- $statsLoop = new WP_Query( array( 
-   	'post_type' => 'stat', 
-   	'posts_per_page' => '4'
- 	));
-?>
+	<!-- we are -->
+<?php if (have_posts()) : ?>
+	<?php while (have_posts()) : the_post(); ?>
   <section class='stats' id='stats'>
 	  <div class='container'>
 	    <div class='row'>
@@ -84,45 +80,24 @@ Template Name: Home
 	        <div class='row'>
 	          <div class='col-lg-1'></div>
 	          <div class='col-lg-10'>
-	            <div class='text-center triple-padding-bottom'>
+	            <div class='text-center'>
 	              <h1 class='jumbo-text'>
-	                <?php echo get_post_meta($post->ID, 'stats_title', true); ?>
+	                <?php echo get_post_meta($post->ID, 'we_are_title', true); ?>
 	              </h1>
-	              <p class='extra-bold-font-name lead'>
-	                <?php echo get_post_meta($post->ID, 'stats_sub', true); ?>
+	              <p class='lead'>
+	                <?php echo get_post_meta($post->ID, 'we_are_text', true); ?>
 	              </p>
 	            </div>
 	          </div>
 	          <div class='col-1'></div>
 	        </div>
-	        <div class='row'>
-	          <div class='stats-container'>
-	            <ul class='list-inline'>
-	            	<?php while ( $statsLoop->have_posts() ) : $statsLoop->the_post(); ?>
-	              <li>
-	                <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center'>
-	                  <?php the_post_thumbnail(); ?>
-	                  <h1 class='number'>
-	                    <?php echo get_post_meta($post->ID, 'stat_number', true); ?>
-	                  </h1>
-	                </div>
-	                <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
-	                  <h3 class='margin-top'>
-	                    <?php the_title(); ?>
-	                  </h3>
-	                  <span class='lead primary-text-color'>
-	                    <?php the_content(); ?>
-	                  </span>
-	                </div>
-	              </li>
-	              <?php endwhile; ?>
-	            </ul>
-	          </div>
-	        </div>
 	      </div>
 	    </div>
 	  </div>
 </section>
+<!--end the loop-->
+	<?php endwhile; ?>
+<?php endif; ?>
 <!-- mission -->
 <?php
  $missionLoop = new WP_Query( array( 
@@ -131,7 +106,7 @@ Template Name: Home
  	));
 ?>
 <?php while ( $missionLoop->have_posts() ) : $missionLoop->the_post(); ?>
-	<section class='section mission' data-speed='3' data-type='background' id='mission'>
+	<section class='section mission' data-speed='3' data-type='background' id='mission' style="background-image:url(<?php echo get_post_meta($post->ID, 'upload_image', true); ?>);">
 		<div class='container'>
 		  <div class='row'>
 		    <div class='col-lg-12'>
@@ -148,9 +123,9 @@ Template Name: Home
 		            <h1 class='jumbo-text'>
 		              <?php the_title(); ?>
 		            </h1>
-		            <a class='btn btn-primary btn-lg margin-bottom' href='<?php echo get_post_meta($post->ID, 'button_link', true); ?>'>
+<!-- 		            <a class='btn btn-primary btn-lg margin-bottom' href='<?php echo get_post_meta($post->ID, 'button_link', true); ?>'>
 		              <?php echo get_post_meta($post->ID, 'button_text', true); ?>
-		            </a>
+		            </a> -->
 		            <p class='extra-bold-font-name lead'>
 		              <?php echo get_post_meta($post->ID, 'sub_text', true); ?>
 		            </p>
@@ -172,6 +147,16 @@ Template Name: Home
   <div class='container'>
     <div class='row'>
       <div class='col-lg-12'>
+      	<div class='contact-text text-center double-margin-bottom padding-bottom'>
+          <h1 class='jumbo-text'>
+          	<?php if (have_posts()) : ?>
+							<?php while (have_posts()) : the_post(); ?>
+            		<?php echo get_post_meta($post->ID, 'strategy_heading', true); ?>
+            <!--end the loop-->
+							<?php endwhile; ?>
+						<?php endif; ?>
+          </h1>
+        </div>
         <div class='row'>
         	<?php
            $homeIconLoop = new WP_Query( array( 

@@ -589,6 +589,8 @@ section{
   &.mission{
     h1{
       color:white;
+      background-color: rgba(0,0,0,.5);
+      padding: 54px;
     }
     p{
       color:white;
@@ -599,9 +601,15 @@ section{
         height:auto;
       }
     }
-    background: url(../images/city_grid_bg.png) repeat-y center 0px fixed; 
+    background: center top fixed;
     @include background-size(cover);
     background-color:$black-color;
+    background-attachment: fixed;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
   }
   &.stats{
     background-color:$light-gray-color;
@@ -672,7 +680,7 @@ section{
       text-align:center;
       margin:0 auto;
       position:relative;
-      bottom:420px;
+      top:-396px;
       margin-bottom:-420px;
     }
   }

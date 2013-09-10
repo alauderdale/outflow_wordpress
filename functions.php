@@ -126,6 +126,27 @@
 	                'std' => ''
 	            ),
 	            array(
+	                'name' => 'Strategy Title',
+	                'desc' => 'add text for the strategy heading',
+	                'id' => 'strategy_heading',
+	                'type' => 'text',
+	                'std' => ''
+	            ),
+	            array(
+	                'name' => 'We Are Title',
+	                'desc' => 'add text for the we are title',
+	                'id' => 'we_are_title',
+	                'type' => 'text',
+	                'std' => ''
+	            ),
+	            array(
+	                'name' => 'We Are Text',
+	                'desc' => 'add text for the we are description',
+	                'id' => 'we_are_text',
+	                'type' => 'textarea',
+	                'std' => ''
+	            ),
+	            array(
 	                'name' => 'Stats Title',
 	                'desc' => 'add title for stats section',
 	                'id' => 'stats_title',
@@ -163,6 +184,20 @@
 	                'type' => 'text',
 	                'std' => ''
 	            ),
+	            array(
+                 'name' => 'Hero Background',
+                 'desc' => 'Select a hero background image',
+                 'id' => 'upload_image',
+                 'type' => 'text',
+                 'std' => ''
+                ),
+                array(
+                     'name' => '',
+                     'desc' => 'Select a hero background image',
+                     'id' => 'upload_image_button',
+                     'type' => 'button',
+                     'std' => 'Browse'
+                ),
 	            array(
 	                'name' => 'Button Link',
 	                'desc' => 'add link for the button',
