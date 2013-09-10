@@ -124,6 +124,20 @@
 	                'id' => 'hero_sub',
 	                'type' => 'text',
 	                'std' => ''
+	            ),
+	            array(
+	                'name' => 'Stats Title',
+	                'desc' => 'add title for stats section',
+	                'id' => 'stats_title',
+	                'type' => 'text',
+	                'std' => ''
+	            ),
+	            array(
+	                'name' => 'Stats Subtitle',
+	                'desc' => 'add sub text for the stats section',
+	                'id' => 'stats_sub',
+	                'type' => 'text',
+	                'std' => ''
 	            )
 	        )
 	    ),

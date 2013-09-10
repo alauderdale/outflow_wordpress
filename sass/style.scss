@@ -610,8 +610,12 @@ section{
   .stats-container{
     margin:0 auto;
     display:block;
+    .col-lg-6{
+      width:auto;
+    }
     ul{
       text-align:center;
+      margin:0;
       margin-bottom:-$baseline;
       li{
         margin-bottom:$baseline*2;
@@ -620,22 +624,23 @@ section{
           width:184px;
           height:184px;
         }
-        &:first-of-type{
-          margin-right:$baseline + 30px!important;
-        }
-        &:nth-child(odd){
-          margin-right:$baseline;
-        }
         h1.number{
           position:relative;
           text-align:center;
           top: -116px;
-          left: 12px;
           font-size:5em;
           margin-bottom:-50px;
         }
       }
     }
+  }
+  &.contact{
+    .contact-text{
+      border-bottom:solid 1px rgba(0,0,0,.2);
+      display:inline-block;
+      width:100%;      
+    }
+
   }
   &.donate_infographic{
     ul.donate_infographic_blocks{
@@ -787,15 +792,8 @@ section{
           width:184px;
           height:184px;
         }
-        &:first-of-type{
-          margin-right:11px!important;
-        }
-        &:nth-child(odd){
-
-        }
         h1.number{
           top: -116px!important;
-          left: 3px!important;
         }
       }
     }

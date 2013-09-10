@@ -136,7 +136,7 @@ Template Name: Donate
               </button>
             </div>
           </div>
-          <?php echo do_shortcode("[stripe_form_begin test=true]"); ?>
+          <?php echo do_shortcode("[stripe_form_begin]"); ?>
           <?php echo do_shortcode("[stripe_form_standard_amount short=true]"); ?>
           <?php echo do_shortcode("[stripe_form_end]"); ?>
           <?php echo do_shortcode("[stripe_form_receipt]"); ?>
