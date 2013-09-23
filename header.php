@@ -17,6 +17,9 @@
     <script src="<?php bloginfo('template_url'); ?>/javascripts/scripts.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/javascripts/jquery.superscrollorama.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_url'); ?>/javascripts/TweenMax.min.js" type="text/javascript"></script>
+    <style type="text/css">
+      <?php echo get_option('nt_custom_css'); ?>
+    </style>
     <?php wp_head(); ?>
   </head>
   <body class='index'>
@@ -28,7 +31,7 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
-          <a class='navbar-brand logo' href='<?php echo get_option('home'); ?>'>
+          <a style="background-image:url(<?php echo get_option('nt_logo');?>);" class='navbar-brand logo' href='<?php echo get_option('home'); ?>'>
             <p></p>
           </a>
         </div>
