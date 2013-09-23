@@ -781,7 +781,6 @@ footer{
 }
 
 
-
 @media (max-width: 780px) {
 
   .navbar{
@@ -843,5 +842,16 @@ section{
     }
   }
 
+}
+
+
+@media (max-width: 640px) {
+  h1{
+    &.jumbo-text{
+      font-size:2em;
+      line-height:$baseline*1.5;
+      margin-bottom:$baseline!important;
+    }
+  }
 }
 
