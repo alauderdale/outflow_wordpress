@@ -414,6 +414,12 @@ array( "name" => "Logo URL",
 	"id" => $shortname."_logo",
 	"type" => "text",
 	"std" => ""),
+
+array( "name" => "Logo Text",
+	"desc" => "OR enter the brand name to be displayed as text",
+	"id" => $shortname."_logo_text",
+	"type" => "text",
+	"std" => ""),
 	
 	
 	

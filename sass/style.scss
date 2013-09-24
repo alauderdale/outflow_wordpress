@@ -510,11 +510,13 @@ a{
   }
   a{
     &.logo{
-      width:125px;
-      background:url(../images/logo_small.png) no-repeat 100%;
+      min-width:125px;
+      background: no-repeat 100%;
       background-size:100%;
       display:block;
       position:relative;
+      color:white;
+      font-family:$extra-bold-font-name;
     }
   }
 }

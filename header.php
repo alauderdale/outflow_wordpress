@@ -31,9 +31,17 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
+          <?php $nt_logo = get_option('nt_logo'); ?>
+          <?php $nt_logo_text = get_option('nt_logo_text'); ?>
+          <?php if($nt_logo) : ?> 
           <a style="background-image:url(<?php echo get_option('nt_logo');?>);" class='navbar-brand logo' href='<?php echo get_option('home'); ?>'>
             <p></p>
           </a>
+          <?php else : ?>
+          <a style="background-image:url(<?php echo get_option('nt_logo');?>);" class='navbar-brand logo' href='<?php echo get_option('home'); ?>'>
+            <?php echo get_option('nt_logo_text'); ?>
+          </a> 
+          <?php endif; ?> 
         </div>
         <div class='nav-collapse collapse navbar-ex1-collapse no-padding-bottom'>
           <ul class='nav navbar-nav text-center pull-right'>
